@@ -1,4 +1,4 @@
-FROM node:12.16.0
+FROM cypress/base:12
 
 # 소스코드 복사
 COPY . /usr/src/app

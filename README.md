@@ -20,6 +20,10 @@ failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /va
 ```
 
 dockerfile을 파일명이 아닌 extension으로 사용할 경우 -f 설정을 해주어야 함
-```
-$ docker build . -t cypress-docker-test -f cypress.Dockerfile
-```
+`$ docker build . -t cypress-docker-test -f cypress.Dockerfile`
+
+### 2. docker FROM 오류
+cypress dependency 문제로 `FROM node`에서 `FROM cypress/base`로 변경
+
+### 3. docker image 사이즈
+2.3GB? -> .dockerignore 파일 추가해봄
